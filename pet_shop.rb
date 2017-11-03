@@ -39,14 +39,13 @@ def pets_by_breed(shop, breed)
 end
 
 
-# def find_pet_by_name(shop, pet_name)
-#  pet_names = {}
-#  for pet in shop
-#     if pet_name == shop[:pets][:name]
-#       name:pet_name.to_s << pet_names
-#     end
-#   end
-# end
+def find_pet_by_name(shop, pet_name)
+ for pet in shop[:pets]
+    if pet[:name] == pet_name
+      return pet
+    end
+  end
+end
 
 
 # def remove_pet_by_name(shop, name)

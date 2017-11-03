@@ -49,6 +49,5 @@ def find_pet_by_name(shop, pet_name)
 end
 
 
-
-# def remove_pet_by_name(shop, name)
-# end
+def remove_pet_by_name(shop, name)
+end

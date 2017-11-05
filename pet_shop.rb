@@ -70,3 +70,12 @@ end
 def add_pet_to_customer(customer, purchased_pet)
   customer[:pets].push(purchased_pet)
 end
+
+
+def customer_can_afford_pet(customer, pet_want_to_buy)
+  if customer[:cash]>= pet_want_to_buy[:price]
+    return true
+  else
+    return false
+  end
+end

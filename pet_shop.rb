@@ -82,7 +82,7 @@ end
 
 
 def sell_pet_to_customer(shop, pet_want_to_buy, customer)
- if pet_want_to_buy != nil
+ if (pet_want_to_buy != nil) && (customer_can_afford_pet(customer,  pet_want_to_buy) == true)
   customer[:pets].push(pet_want_to_buy)
   shop[:pets].delete(pet_want_to_buy)
   # Is there a way to take an item out of an array and put it into another without two lines?

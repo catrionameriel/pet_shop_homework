@@ -79,3 +79,12 @@ def customer_can_afford_pet(customer, pet_want_to_buy)
     return false
   end
 end
+
+
+def sell_pet_to_customer(shop, pet_want_to_buy, customer)
+  customer[:pets].push(pet_want_to_buy)
+  shop[:pets].delete(pet_want_to_buy)
+  shop[:admin][:pets_sold]+= 1
+  money = pet_want_to_buy[:price]
+  shop[:admin][:total_cash]+= money
+end
